@@ -3,6 +3,7 @@ import modal
 import json
 import os
 
+# main page
 def main():
     st.title("Newsletter Dashboard")
 
@@ -42,11 +43,15 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            st.write(podcast_info['podcast_guest']['name'])
+            #st.write(podcast_info['podcast_guest']['name'])
+            st.write(podcast_info['podcast_guest'])
 
         with col4:
             st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"]['summary'])
+            try:
+                st.write(podcast_info["podcast_guest"]['summary'])
+            except:
+                st.write("Not available")
 
         # Display the five key moments
         st.subheader("Key Moments")
