@@ -62,6 +62,13 @@ def main():
     process_button = st.sidebar.button("Process Podcast Feed")
     st.sidebar.markdown("**Note**: Podcast processing can take upto 5 mins, please be patient.")
 
+    st.markdown("""---""")
+    st.write("An app created by Paolo Pozzoli")
+    #display image in streamlit, per specific width
+    st.image("pp.jpg",
+             caption='Follow me on LinkedIn - https://www.linkedin.com/in/paolo-pozzoli-9bb5a183/',
+             width=200)
+
     if process_button:
 
         # Call the function to process the URLs and retrieve podcast guest information
